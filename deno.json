@@ -1,0 +1,24 @@
+{
+  "name": "@justinmchase/specs",
+  "version": "1.0.0",
+  "license": "MIT",
+  "exports": {
+    ".": "./src/audit/mod.ts",
+    "./audit": "./src/audit/cli.ts"
+  },
+  "imports": {
+    "@std/assert": "jsr:@std/assert@^1",
+    "@std/front-matter": "jsr:@std/front-matter@^1",
+    "@std/fs": "jsr:@std/fs@^1",
+    "@std/path": "jsr:@std/path@^1"
+  },
+  "tasks": {
+    "test": "deno test --allow-read --allow-write",
+    "audit": "deno run --allow-read ./src/audit/cli.ts --strict",
+    "pre": "deno fmt && deno lint && deno task test && deno task audit"
+  },
+  "publish": {
+    "include": ["README.md", "LICENSE", "deno.json", "src/**/*.ts"],
+    "exclude": ["src/**/*.test.ts", "src/audit/fixture.ts"]
+  }
+}
