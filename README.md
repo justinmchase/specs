@@ -117,8 +117,8 @@ In GitHub Actions:
 Releases follow semantic versioning. The major version is the one a repository
 names in `.agents/SPECS`; each stays available at the `v{major}` branch, which
 the `AGENTS.md` links and the action use. Publishing a release fast-forwards
-that branch to it. A change that would make a passing
-repository fail the audit, or that asks more of authors, is a new major version.
+that branch to it. A change that would make a passing repository fail the audit,
+or that asks more of authors, is a new major version.
 
 ## License
 
