@@ -1,0 +1,40 @@
+name: Publish
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  jsr:
+    name: Publish to JSR
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+
+      - run: deno publish
+
+  major:
+    name: Advance the major-version branch
+    # Repositories read the v{major} branch, so it must only fast-forward.
+    if: ${{ !github.event.release.prerelease }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - env:
+          TAG: ${{ github.event.release.tag_name }}
+        run: |
+          major="v${TAG#v}"
+          major="${major%%.*}"
+          git push origin "refs/tags/$TAG^{commit}:refs/heads/$major"

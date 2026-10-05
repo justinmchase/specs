@@ -1,0 +1,10 @@
+{
+  "name": "specs",
+  "version": "1.0.0",
+  "description": "The specs method: a living specification, testable requirements that cite it, and tests that cite them.",
+  "author": { "name": "Justin Chase" },
+  "homepage": "https://github.com/justinmchase/specs",
+  "repository": "https://github.com/justinmchase/specs",
+  "license": "MIT",
+  "keywords": ["specifications", "requirements", "traceability", "spec-driven"]
+}

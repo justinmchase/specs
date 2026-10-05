@@ -1,0 +1,14 @@
+{
+  "name": "justinmchase",
+  "owner": { "name": "Justin Chase" },
+  "metadata": {
+    "description": "Plugins by Justin Chase"
+  },
+  "plugins": [
+    {
+      "name": "specs",
+      "source": "./",
+      "description": "The specs method: a living specification, testable requirements that cite it, and tests that cite them."
+    }
+  ]
+}
