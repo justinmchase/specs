@@ -81,12 +81,12 @@ so it does not drift from repository to repository.
 Installing the plugin gives your agent the `specs`, `requirements`,
 `specs-init`, and `specs-audit` skills.
 
-| Agent              | Install                                                                                       |
-| ------------------ | --------------------------------------------------------------------------------------------- |
-| Claude Code        | `/plugin marketplace add justinmchase/specs`, then `/plugin install specs@justinmchase`       |
-| GitHub Copilot CLI | `copilot plugin install justinmchase/specs`                                                   |
-| Codex              | `codex plugin marketplace add justinmchase/specs`, then `codex plugin add specs@justinmchase` |
-| Cursor             | `git clone https://github.com/justinmchase/specs ~/.cursor/plugins/local/specs`, then reload  |
+| Agent              | Install                                                                                               |
+| ------------------ | ----------------------------------------------------------------------------------------------------- |
+| Claude Code        | `/plugin marketplace add justinmchase/specs`, then `/plugin install specs@justinmchase`               |
+| GitHub Copilot CLI | `copilot plugin marketplace add justinmchase/specs`, then `copilot plugin install specs@justinmchase` |
+| Codex              | `codex plugin marketplace add justinmchase/specs`, then `codex plugin add specs@justinmchase`         |
+| Cursor             | `git clone https://github.com/justinmchase/specs ~/.cursor/plugins/local/specs`, then reload          |
 
 Cursor teams can instead import this repository as a team marketplace. Agents
 without the plugin can still follow the method through the links in the
