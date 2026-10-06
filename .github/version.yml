@@ -1,0 +1,17 @@
+on:
+  post:
+    - kind: regexp
+      file: VERSION
+      pattern: ".+"
+    - kind: regexp
+      file: deno.json
+      pattern: '(?<="version": ").*(?=",)'
+    - kind: regexp
+      file: plugin.json
+      pattern: '(?<="version": ").*(?=",)'
+    - kind: regexp
+      file: .claude-plugin/plugin.json
+      pattern: '(?<="version": ").*(?=",)'
+    - kind: regexp
+      file: .cursor-plugin/plugin.json
+      pattern: '(?<="version": ").*(?=",)'

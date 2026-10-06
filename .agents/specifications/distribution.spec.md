@@ -55,6 +55,8 @@ here.
 - Releases MUST follow semantic versioning. A change that would make a
   repository that passed the audit fail it, or that changes what the method
   requires of authors, is a major change.
+- A release's version MUST be written to the package and every plugin manifest
+  before the release is published, so all of them name the release.
 - Each major version MUST stay available at a branch named `v{major}`, which the
   pointer's raw links and the GitHub Action refer to. Publishing a release MUST
   fast-forward that branch to the release, and nothing may rewind or rewrite it.
