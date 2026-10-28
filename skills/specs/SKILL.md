@@ -3,13 +3,13 @@ name: specs
 description: Write and maintain a repository's specifications under the specs method. Use when a repository has an .agents/SPECS file and you are creating or editing its specification chapters, or making a behavior change that the specification should cover.
 license: MIT
 metadata:
-  specs-version: "2"
+  specs-version: "1"
 ---
 
 # Specifications
 
 The repository follows the specs method
-(<https://github.com/justinmchase/specs>), version 2. Its `.agents/SPECS` file
+(<https://github.com/justinmchase/specs>), version 1. Its `.agents/SPECS` file
 says so, and says where the specifications live: `.agents/specifications/`
 unless a `specifications:` line in that file names another directory.
 
@@ -94,4 +94,4 @@ requirement's `spec_ref`, update links to renamed headings, and run the
 repository's local tests that verify those requirements.
 
 The full method is defined at
-<https://github.com/justinmchase/specs/tree/v2/.agents/specifications>.
+<https://github.com/justinmchase/specs/tree/v1/.agents/specifications>.

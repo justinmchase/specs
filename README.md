@@ -53,7 +53,7 @@ to.
 ```text
 AGENTS.md                      a short pointer block (see below)
 .agents/
-  SPECS                        "specs v2" and this repository's URL
+  SPECS                        "specs v1" and this repository's URL
   specifications/
     README.md                  the index
     {topic}.spec.md
@@ -66,7 +66,7 @@ AGENTS.md                      a short pointer block (see below)
 declares a license:
 
 ```text
-specs v2
+specs v1
 https://github.com/justinmchase/specs
 ```
 
@@ -105,17 +105,17 @@ repository's tests, and report remaining gaps. A citation alone does not prove
 the requirement is tested; the assertions must exercise its behavior.
 
 This repository retains a Deno audit for checking its own marker, requirement
-documents, and test references. It runs in this repository's `deno task pre` and
-CI; it is not part of the installed plugin or an adopting repository's
-verification workflow.
+documents, and test references. Its standalone CLI and GitHub Action remain
+available for existing users, but they are not plugin tools or part of the
+skills' adopting workflow. This repository runs the audit in `deno task pre` and
+CI.
 
 ## Versioning
 
 Releases follow semantic versioning. The major version is the one a repository
 names in `.agents/SPECS`; each stays available at the `v{major}` branch, which
 the `AGENTS.md` links use. Publishing a release fast-forwards that branch to it.
-Removing a published interface or changing what the method asks of authors
-requires a new major version.
+The major version changes when the method's compatibility contract changes.
 
 ## License
 

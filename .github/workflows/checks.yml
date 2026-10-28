@@ -28,5 +28,10 @@ jobs:
       - name: Test
         run: deno task test
 
-      - name: Audit this repository
-        run: deno task audit
+      - name: Publish (dry run)
+        run: deno publish --dry-run
+
+      - name: Audit this repository with the action
+        uses: ./
+        with:
+          strict: true

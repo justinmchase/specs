@@ -32,15 +32,14 @@ capitals.
 
 ## Local verification
 
-- A repository following the method MUST use its own unit or other local tests
-  to verify requirement behavior. The skills MUST guide agents to add or update
-  those tests when requirements change and to run the repository's normal test
-  suite.
-- An agent MUST inspect `req:{id}` citations against the requirement documents
-  and identify requirements without a verifying test. A citation alone does not
-  prove behavior: the local test must exercise the requirement it cites.
-- Adopting the method MUST NOT depend on a tool or test runner supplied by the
-  specs plugin.
+- The method's behavioral verification uses the adopting repository's own unit
+  or other local tests. The skills MUST guide agents to add or update those
+  tests when requirements change and to run the repository's normal test suite.
+- The skills MUST guide agents to inspect `req:{id}` citations against the
+  requirement documents and identify requirements without a verifying test. A
+  citation alone does not prove behavior: the local test must exercise the
+  requirement it cites.
+- The plugin MUST NOT make adoption depend on a tool or test runner it supplies.
 
 ## Audit
 

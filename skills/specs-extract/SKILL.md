@@ -3,7 +3,7 @@ name: specs-extract
 description: Extract an initial specification and requirements from an existing codebase, then connect them to that repository's own tests. Use when adopting the specs method in an established repository.
 license: MIT
 metadata:
-  specs-version: "2"
+  specs-version: "1"
 ---
 
 # Extract specs from an existing codebase

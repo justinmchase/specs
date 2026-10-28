@@ -3,7 +3,7 @@ name: specs-verify
 description: Verify a repository's specifications and requirements using its own local tests. Use after changing specifications, requirements, or tests, or when asked to check traceability.
 license: MIT
 metadata:
-  specs-version: "2"
+  specs-version: "1"
 ---
 
 # Verify with local tests

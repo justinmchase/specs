@@ -12,9 +12,8 @@ Expected behavior:
 
 - Plugin manifests MUST NOT declare callable tools, MCP servers, commands,
   hooks, or agents.
-- The plugin root MUST NOT contain a public audit action or exported audit
-  package entry point. This repository MAY retain its audit implementation and
-  command for its own validation.
+- Existing standalone audit interfaces MAY remain available outside the plugin
+  for compatibility. They MUST NOT be declared as plugin tools.
 - The plugin's consumer instructions MUST use the adopting repository's local
   tests and MUST NOT direct agents to a specs-provided audit command or action.
 

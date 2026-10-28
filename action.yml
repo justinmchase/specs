@@ -1,0 +1,27 @@
+name: specs audit
+description: Audit a repository against the specs method (https://github.com/justinmchase/specs).
+branding:
+  icon: check-square
+  color: blue
+inputs:
+  path:
+    description: The repository root to audit.
+    default: "."
+  strict:
+    description: Fail on warnings as well as errors.
+    default: "false"
+runs:
+  using: composite
+  steps:
+    - uses: denoland/setup-deno@v2
+      with:
+        deno-version: v2.x
+    - shell: bash
+      env:
+        AUDIT_PATH: ${{ inputs.path }}
+        AUDIT_STRICT: ${{ inputs.strict }}
+      run: |
+        args=("$AUDIT_PATH" --format github)
+        if [ "$AUDIT_STRICT" = "true" ]; then args+=(--strict); fi
+        deno run --allow-read --config "$GITHUB_ACTION_PATH/deno.json" \
+          "$GITHUB_ACTION_PATH/src/audit/cli.ts" "${args[@]}"

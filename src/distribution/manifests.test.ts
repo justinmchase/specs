@@ -54,33 +54,26 @@ Deno.test("req:distribution-001 - manifests agree", async (t) => {
     }
   });
 
-  await t.step(
-    "req:distribution-003 - no public audit package, action, or tool folders",
-    async () => {
-      assertEquals("exports" in deno, false);
-      assertEquals("publish" in deno, false);
-      for (
-        const path of [
-          "action.yml",
-          ".github/workflows/publish.yml",
-          "mcp.json",
-          ".mcp.json",
-          "tools",
-          "commands",
-          "hooks",
-          "agents",
-          ".claude-plugin/commands",
-          ".cursor-plugin/commands",
-        ]
-      ) {
-        await assertRejects(
-          () => Deno.stat(new URL(path, root)),
-          Deno.errors.NotFound,
-          path,
-        );
-      }
-    },
-  );
+  await t.step("req:distribution-003 - no plugin tool folders", async () => {
+    for (
+      const path of [
+        "mcp.json",
+        ".mcp.json",
+        "tools",
+        "commands",
+        "hooks",
+        "agents",
+        ".claude-plugin/commands",
+        ".cursor-plugin/commands",
+      ]
+    ) {
+      await assertRejects(
+        () => Deno.stat(new URL(path, root)),
+        Deno.errors.NotFound,
+        path,
+      );
+    }
+  });
 
   await t.step(
     "every marketplace lists the plugin at the repository root",

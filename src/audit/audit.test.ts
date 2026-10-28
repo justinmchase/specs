@@ -51,7 +51,7 @@ Deno.test("req:audit-002 - directories", async (t) => {
     assertEquals(
       await findings({
         ".agents/SPECS":
-          "specs v2\nhttps://github.com/justinmchase/specs\n\nspecifications: nope\nrequirements: none\n",
+          "specs v1\nhttps://github.com/justinmchase/specs\n\nspecifications: nope\nrequirements: none\n",
       }),
       [
         "error none: the requirements directory does not exist",

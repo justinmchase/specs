@@ -16,7 +16,7 @@ Expected behavior:
 
 - A missing `.agents/SPECS` MUST be an error.
 - The first line MUST match `specs v<major>`; anything else MUST be an error. A
-  major version other than 2 MUST be an error naming the supported version.
+  major version other than 1 MUST be an error naming the supported version.
 - The second line MUST be an absolute `https:` URL; anything else MUST be an
   error.
 - Later lines MUST be `key: value` settings. A line that is not MUST be an

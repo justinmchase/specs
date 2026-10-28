@@ -22,7 +22,7 @@ The marker is plain text, in the spirit of a `LICENSE` file: readable at a
 glance and simple to parse.
 
 ```text
-specs v2
+specs v1
 https://github.com/justinmchase/specs
 
 requirements: .agents/requirements

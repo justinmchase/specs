@@ -3,7 +3,7 @@ name: specs-init
 description: Set up the specs method in a repository. Use when asked to adopt the specs method, add specifications and requirements to a repository, or set up https://github.com/justinmchase/specs.
 license: MIT
 metadata:
-  specs-version: "2"
+  specs-version: "1"
 ---
 
 # Set up the specs method
@@ -26,7 +26,7 @@ drift.
 Create `.agents/SPECS` with exactly:
 
 ```text
-specs v2
+specs v1
 https://github.com/justinmchase/specs
 ```
 

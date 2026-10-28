@@ -19,8 +19,9 @@ capitals.
   defines, so every agent can load it. Its `name` MUST match its directory.
 - The skills MUST be self-contained enough to follow without this repository
   checked out, and MAY link to these chapters for detail.
-- The installed plugin MUST provide skills only. It MUST NOT declare or package
-  callable tools, MCP servers, commands, hooks, or agents.
+- The installed plugin MUST expose skills only. Its manifests MUST NOT declare
+  callable tools, MCP servers, commands, hooks, or agents. Standalone audit
+  interfaces in this repository are separate from the plugin.
 - The skills MUST include workflows for initializing the method, extracting an
   initial specification from an existing codebase, maintaining specifications
   and requirements, and verifying them with the adopting repository's tests.
@@ -59,9 +60,9 @@ here.
 
 ## Versioning
 
-- Releases MUST follow semantic versioning. A change that would make a
-  repository that passed the method's checks fail them, removes a published
-  interface, or changes what the method requires of authors, is a major change.
+- Releases MUST follow semantic versioning. A change that makes a previously
+  conforming repository fail the method's requirements, or changes what the
+  method requires of authors, is a major change.
 - A release's version MUST be written to `VERSION`, `deno.json`, and every
   plugin manifest before the release is published, so all of them name the
   release.
