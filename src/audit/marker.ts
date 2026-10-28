@@ -1,7 +1,7 @@
 import { error, type Finding, warning } from "./finding.ts";
 
 /** The major versions of the method this audit implements. */
-export const SUPPORTED_MAJOR = 1;
+export const SUPPORTED_MAJOR = 2;
 
 export const MARKER_PATH = ".agents/SPECS";
 

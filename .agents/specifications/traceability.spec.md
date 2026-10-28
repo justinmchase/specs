@@ -1,7 +1,7 @@
 # Traceability
 
-How requirements cite specifications, how tests cite requirements, and what an
-audit of a repository checks.
+How requirements cite specifications, how a repository's tests verify its
+requirements, and how this repository validates the method itself.
 
 ## Conventions
 
@@ -30,10 +30,23 @@ capitals.
 - Every `req:{id}` token in a test file MUST name an existing requirement.
 - Every requirement SHOULD be cited by at least one test.
 
+## Local verification
+
+- A repository following the method MUST use its own unit or other local tests
+  to verify requirement behavior. The skills MUST guide agents to add or update
+  those tests when requirements change and to run the repository's normal test
+  suite.
+- An agent MUST inspect `req:{id}` citations against the requirement documents
+  and identify requirements without a verifying test. A citation alone does not
+  prove behavior: the local test must exercise the requirement it cites.
+- Adopting the method MUST NOT depend on a tool or test runner supplied by the
+  specs plugin.
+
 ## Audit
 
-An audit checks a repository against this method. It reports each finding as an
-error or a warning.
+This repository's internal audit checks its conformance to the method. It is not
+a plugin-delivered tool or a prerequisite for repositories that adopt the
+method. It reports each finding as an error or a warning.
 
 Errors:
 

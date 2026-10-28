@@ -22,7 +22,7 @@ The marker is plain text, in the spirit of a `LICENSE` file: readable at a
 glance and simple to parse.
 
 ```text
-specs v1
+specs v2
 https://github.com/justinmchase/specs
 
 requirements: .agents/requirements
@@ -37,7 +37,7 @@ requirements: .agents/requirements
   line SHOULD separate them from the first two lines.
 - Lines beginning with `#` are comments and MUST be ignored, as MUST leading and
   trailing whitespace on every line.
-- A key MUST NOT appear more than once. A tool MUST report a key it does not
+- A key MUST NOT appear more than once. A checker MUST report a key it does not
   know, and SHOULD continue.
 
 ## Settings

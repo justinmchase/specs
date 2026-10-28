@@ -3,7 +3,7 @@ name: specs-init
 description: Set up the specs method in a repository. Use when asked to adopt the specs method, add specifications and requirements to a repository, or set up https://github.com/justinmchase/specs.
 license: MIT
 metadata:
-  specs-version: "1"
+  specs-version: "2"
 ---
 
 # Set up the specs method
@@ -16,7 +16,7 @@ drift.
 ## 1. Look before writing
 
 - If `.agents/SPECS` already exists, the repository has adopted the method. Read
-  it and stop unless asked to change it.
+  it and continue with the requested change; do not initialize it again.
 - Look for existing design documents, ADRs, or instruction files that describe
   behavior (`docs/`, `.cursor/rules/`, `.github/instructions/`,
   `.github/copilot-instructions.md`, `CLAUDE.md`). Note them for step 5.
@@ -26,7 +26,7 @@ drift.
 Create `.agents/SPECS` with exactly:
 
 ```text
-specs v1
+specs v2
 https://github.com/justinmchase/specs
 ```
 
@@ -62,8 +62,9 @@ reads both.
 
 ## 5. Bring existing knowledge in
 
-- If existing documents state behavior as rules, draft them as specification
-  chapters (use the `specs` skill) and list each chapter in the index.
+- For an established codebase, follow `specs-extract` to derive a first,
+  reviewable slice from code, existing tests, and documents. It guides you to
+  resolve conflicts before making observed behavior normative.
 - Remove copies of method rules from per-tool instruction files (for example
   rules about how to write specs or requirements); the pointer and the skills
   replace them. Keep repository-specific rules where they are.
@@ -71,8 +72,8 @@ reads both.
 
 ## 6. Check and report
 
-- Run the audit (the `specs-audit` skill). A new repository should report no
-  errors.
+- Follow `specs-verify`: connect requirements to this repository's own local
+  tests and run its normal test command. A marker and empty indexes alone do not
+  verify behavior; report which areas have not yet been specified or tested.
 - Tell the user how to install the plugin for their agent, from
-  <https://github.com/justinmchase/specs#install>, and suggest adding the audit
-  to CI with the `justinmchase/specs@v1` GitHub Action.
+  <https://github.com/justinmchase/specs#install>.

@@ -3,13 +3,13 @@ name: requirements
 description: Write requirement documents and trace tests to them under the specs method. Use when a repository has an .agents/SPECS file and you are adding or changing a requirement, writing a test for one, or removing behavior that requirements or tests cover.
 license: MIT
 metadata:
-  specs-version: "1"
+  specs-version: "2"
 ---
 
 # Requirements
 
 The repository follows the specs method
-(<https://github.com/justinmchase/specs>), version 1. Requirements live in
+(<https://github.com/justinmchase/specs>), version 2. Requirements live in
 `.agents/requirements/` unless `.agents/SPECS` has a `requirements:` line naming
 another directory.
 
@@ -91,6 +91,6 @@ Keep it narrower and more concrete than the specification text it refines.
 
 ## Checking your work
 
-Run the audit (the `specs-audit` skill). It reports missing front matter,
-duplicate ids, `spec_ref`s that don't resolve, tests citing requirements that
-don't exist, and requirements no test cites.
+Follow `specs-verify`: inspect front matter, ids, and `spec_ref` links; make
+sure local tests cite the requirements they actually verify; and run the
+repository's normal test suite. Report requirements that still lack a test.

@@ -47,7 +47,7 @@ Deno.test("req:audit-006 - report and exit", async (t) => {
       assertEquals(await runCli([root]), {
         code: 1,
         lines: [
-          "error .agents/SPECS: this audit implements specs v1, not v9",
+          "error .agents/SPECS: this audit implements specs v2, not v9",
           "1 error, 0 warnings",
         ],
       });
@@ -59,7 +59,7 @@ Deno.test("req:audit-006 - report and exit", async (t) => {
       const { lines } = await runCli([root, "--format", "github"]);
       assertEquals(
         lines[0],
-        "::error file=.agents/SPECS::this audit implements specs v1, not v9",
+        "::error file=.agents/SPECS::this audit implements specs v2, not v9",
       );
     });
   });

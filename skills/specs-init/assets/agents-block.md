@@ -12,6 +12,6 @@ This repository follows the specs method, as declared in `.agents/SPECS`
 - Tests cite the requirements they verify with `req:{id}`.
 - Before writing specifications or requirements, use the `specs` and
   `requirements` skills. Without the plugin installed, read them at
-  <https://raw.githubusercontent.com/justinmchase/specs/v1/skills/specs/SKILL.md>
+  <https://raw.githubusercontent.com/justinmchase/specs/v2/skills/specs/SKILL.md>
   and
-  <https://raw.githubusercontent.com/justinmchase/specs/v1/skills/requirements/SKILL.md>.
+  <https://raw.githubusercontent.com/justinmchase/specs/v2/skills/requirements/SKILL.md>.

@@ -6,7 +6,7 @@ import { dirname, join } from "@std/path";
  */
 export const REQ = "req" + ":";
 
-export const MARKER = "specs v1\nhttps://github.com/justinmchase/specs\n";
+export const MARKER = "specs v2\nhttps://github.com/justinmchase/specs\n";
 
 export const SPEC = [
   "# Things",

@@ -17,8 +17,11 @@ If you were asked to set up the specs method in a repository:
 2. To write specifications or requirements afterwards, follow
    [`skills/specs/SKILL.md`](skills/specs/SKILL.md) and
    [`skills/requirements/SKILL.md`](skills/requirements/SKILL.md).
-3. To check the result, follow
-   [`skills/specs-audit/SKILL.md`](skills/specs-audit/SKILL.md).
+3. For an existing codebase, follow
+   [`skills/specs-extract/SKILL.md`](skills/specs-extract/SKILL.md) to bring one
+   area of existing behavior into the method.
+4. To check the result with that repository's tests, follow
+   [`skills/specs-verify/SKILL.md`](skills/specs-verify/SKILL.md).
 
 If the repository already has an `.agents/SPECS` file, it has adopted the
 method; read its `AGENTS.md`.
@@ -37,7 +40,7 @@ method; read its `AGENTS.md`.
 - A behavior change updates the specification or requirement in the same change
   as the code. A behavior nobody specified is a gap to fill, not a license.
 - Requirements cite specification sections (`spec_ref`), tests cite requirements
-  (`req:{id}`), and the audit checks both.
+  (`req:{id}`), and the repository's own local tests verify behavior.
 
 The normative definition is in
 [`.agents/specifications/`](.agents/specifications/README.md). Unlike
@@ -50,7 +53,7 @@ to.
 ```text
 AGENTS.md                      a short pointer block (see below)
 .agents/
-  SPECS                        "specs v1" and this repository's URL
+  SPECS                        "specs v2" and this repository's URL
   specifications/
     README.md                  the index
     {topic}.spec.md
@@ -63,7 +66,7 @@ AGENTS.md                      a short pointer block (see below)
 declares a license:
 
 ```text
-specs v1
+specs v2
 https://github.com/justinmchase/specs
 ```
 
@@ -79,7 +82,8 @@ so it does not drift from repository to repository.
 ## Install
 
 Installing the plugin gives your agent the `specs`, `requirements`,
-`specs-init`, and `specs-audit` skills.
+`specs-init`, `specs-extract`, and `specs-verify` skills. The plugin contains no
+callable tools or MCP server.
 
 | Agent              | Install                                                                                               |
 | ------------------ | ----------------------------------------------------------------------------------------------------- |
@@ -92,33 +96,26 @@ Cursor teams can instead import this repository as a team marketplace. Agents
 without the plugin can still follow the method through the links in the
 `AGENTS.md` block.
 
-## Audit
+## Verify requirements
 
-The audit checks the marker, that every requirement has an `id`, `title`, and
-`spec_ref`, that ids are unique, that every `spec_ref` names a real chapter and
-heading, and that tests cite only requirements that exist. Requirements no test
-cites are warnings.
+Use the adopting repository's normal unit or local test suite. Each test cites
+the requirements it verifies with `req:{id}`. The `specs-verify` skill guides
+agents to inspect those links, add tests where coverage is missing, run the
+repository's tests, and report remaining gaps. A citation alone does not prove
+the requirement is tested; the assertions must exercise its behavior.
 
-```sh
-deno run --allow-read jsr:@justinmchase/specs/audit [root] [--strict]
-```
-
-In GitHub Actions:
-
-```yaml
-- uses: actions/checkout@v5
-- uses: justinmchase/specs@v1
-  with:
-    strict: false
-```
+This repository retains a Deno audit for checking its own marker, requirement
+documents, and test references. It runs in this repository's `deno task pre` and
+CI; it is not part of the installed plugin or an adopting repository's
+verification workflow.
 
 ## Versioning
 
 Releases follow semantic versioning. The major version is the one a repository
 names in `.agents/SPECS`; each stays available at the `v{major}` branch, which
-the `AGENTS.md` links and the action use. Publishing a release fast-forwards
-that branch to it. A change that would make a passing repository fail the audit,
-or that asks more of authors, is a new major version.
+the `AGENTS.md` links use. Publishing a release fast-forwards that branch to it.
+Removing a published interface or changing what the method asks of authors
+requires a new major version.
 
 ## License
 
