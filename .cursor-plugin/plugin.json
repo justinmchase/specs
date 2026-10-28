@@ -1,6 +1,6 @@
 {
   "name": "specs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The specs method: a living specification, testable requirements that cite it, and tests that cite them.",
   "author": { "name": "Justin Chase" },
   "homepage": "https://github.com/justinmchase/specs",
