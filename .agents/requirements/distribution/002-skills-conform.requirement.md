@@ -18,6 +18,10 @@ Expected behavior:
   lowercase letters, digits, and single hyphens, not starting or ending with a
   hyphen.
 - `description` MUST be non-empty and at most 1024 characters.
+- The plugin MUST include `specs-init`, `specs-extract`, `specs`,
+  `requirements`, and `specs-verify` skills.
+- Each skill's `metadata.specs-version` MUST equal the major version in the
+  plugin manifests.
 
 Postconditions:
 

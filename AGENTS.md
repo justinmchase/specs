@@ -1,7 +1,8 @@
 # Agent instructions
 
-This repository defines the specs method and ships it as Agent Skills, a plugin
-for each coding agent, and an audit tool. It follows the method itself.
+This repository defines the specs method and ships a skills-only plugin for each
+coding agent. It follows the method itself and keeps an internal audit for its
+own validation.
 
 ## Specifications
 
@@ -30,6 +31,6 @@ This repository follows the specs method, as declared in `.agents/SPECS`
   that adopts the method afterwards.
 - Every manifest (`plugin.json`, `.claude-plugin/`, `.cursor-plugin/`) must
   agree on name, version, and description, and match `deno.json`'s version.
-- Use TypeScript and Deno for all tooling. Before pushing, run `deno task pre`
-  (format, lint, test, and a strict audit of this repository).
+- Use TypeScript and Deno for internal tooling. Before pushing, run
+  `deno task pre` (format, lint, test, and a strict audit of this repository).
 - Never create, push, or move tags by hand; releases create them.

@@ -91,6 +91,6 @@ Keep it narrower and more concrete than the specification text it refines.
 
 ## Checking your work
 
-Run the audit (the `specs-audit` skill). It reports missing front matter,
-duplicate ids, `spec_ref`s that don't resolve, tests citing requirements that
-don't exist, and requirements no test cites.
+Follow `specs-verify`: inspect front matter, ids, and `spec_ref` links; make
+sure local tests cite the requirements they actually verify; and run the
+repository's normal test suite. Report requirements that still lack a test.

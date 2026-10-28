@@ -15,6 +15,6 @@ This repository follows the method it defines (see `.agents/SPECS`).
 - [layout](./layout.spec.md): where specifications and requirements live and how
   they are written.
 - [traceability](./traceability.spec.md): how requirements cite the spec, how
-  tests cite requirements, and what the audit checks.
+  local tests verify requirements, and how this repository checks itself.
 - [distribution](./distribution.spec.md): how the method reaches agents, and how
   it is versioned.
