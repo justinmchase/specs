@@ -8,7 +8,10 @@
     {
       "name": "specs",
       "source": "./",
-      "description": "The specs method: a living specification, testable requirements that cite it, and tests that cite them."
+      "description": "The specs method: a living specification, testable requirements that cite it, and tests that cite them.",
+      "homepage": "https://justinmchase.github.io/specs/",
+      "repository": "https://github.com/justinmchase/specs",
+      "logo": "assets/logo.svg"
     }
   ]
 }

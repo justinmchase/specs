@@ -74,5 +74,5 @@ reads both.
 - Run the audit (the `specs-audit` skill). A new repository should report no
   errors.
 - Tell the user how to install the plugin for their agent, from
-  <https://github.com/justinmchase/specs#install>, and suggest adding the audit
-  to CI with the `justinmchase/specs@v1` GitHub Action.
+  <https://justinmchase.github.io/specs/>, and suggest adding the audit to CI
+  with the `justinmchase/specs@v1` GitHub Action.
