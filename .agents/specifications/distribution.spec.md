@@ -43,6 +43,17 @@ the skills with its own plugin manager:
   and every marketplace entry MUST point at the repository root.
 - Neither the manifests nor the plugin instructions may present this
   repository's internal audit as a tool supplied by the plugin.
+- The Cursor plugin manifest MUST name a logo file that lives in this
+  repository, as a relative path, so the Cursor Marketplace can show it.
+
+## Site
+
+The method MUST be published as a one-page static site that GitHub Pages can
+serve from this repository (`https://justinmchase.github.io/specs/`). The site
+MUST include the logo and an install procedure written for a coding agent, so
+that an agent pointed at the site can install the plugin for the product it runs
+in and, when asked, adopt the method in the repository it is working in without
+copying the method into that repository.
 
 ## Repository pointer
 

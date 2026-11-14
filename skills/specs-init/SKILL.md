@@ -76,4 +76,4 @@ reads both.
   tests and run its normal test command. A marker and empty indexes alone do not
   verify behavior; report which areas have not yet been specified or tested.
 - Tell the user how to install the plugin for their agent, from
-  <https://github.com/justinmchase/specs#install>.
+  <https://justinmchase.github.io/specs/>.

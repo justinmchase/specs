@@ -1,11 +1,16 @@
 # specs
 
+<img src="assets/logo.svg" alt="specs" width="64" height="64">
+
 A small method for keeping software honest with coding agents: a living
 specification, testable requirements that cite it, and tests that cite the
 requirements. When they disagree, the specification wins, and behavior changes
 update the specification in the same pull request as the code.
 
 It works with Claude Code, Cursor, GitHub Copilot, and Codex, and with people.
+
+Site: <https://justinmchase.github.io/specs/>. Point an agent at that page, or
+paste the install prompt from it, to install the plugin and adopt the method.
 
 ## Agents: start here
 
@@ -85,16 +90,17 @@ Installing the plugin gives your agent the `specs`, `requirements`,
 `specs-init`, `specs-extract`, and `specs-verify` skills. The plugin contains no
 callable tools or MCP server.
 
-| Agent              | Install                                                                                               |
-| ------------------ | ----------------------------------------------------------------------------------------------------- |
-| Claude Code        | `/plugin marketplace add justinmchase/specs`, then `/plugin install specs@justinmchase`               |
-| GitHub Copilot CLI | `copilot plugin marketplace add justinmchase/specs`, then `copilot plugin install specs@justinmchase` |
-| Codex              | `codex plugin marketplace add justinmchase/specs`, then `codex plugin add specs@justinmchase`         |
-| Cursor             | `git clone https://github.com/justinmchase/specs ~/.cursor/plugins/local/specs`, then reload          |
+| Agent              | Install                                                                                                                     |
+| ------------------ | --------------------------------------------------------------------------------------------------------------------------- |
+| Claude Code        | `/plugin marketplace add justinmchase/specs`, then `/plugin install specs@justinmchase`                                     |
+| GitHub Copilot CLI | `copilot plugin marketplace add justinmchase/specs`, then `copilot plugin install specs@justinmchase`                       |
+| Codex              | `codex plugin marketplace add justinmchase/specs`, then `codex plugin add specs@justinmchase`                               |
+| Cursor             | Customize → search `specs`, or `git clone https://github.com/justinmchase/specs ~/.cursor/plugins/local/specs`, then reload |
 
 Cursor teams can instead import this repository as a team marketplace. Agents
 without the plugin can still follow the method through the links in the
-`AGENTS.md` block.
+`AGENTS.md` block. A prompt any agent can follow lives at
+<https://justinmchase.github.io/specs/install.md>.
 
 ## Verify requirements
 

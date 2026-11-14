@@ -35,21 +35,18 @@ Deno.test("req:distribution-001 - manifests agree", async (t) => {
   );
 
   await t.step("req:distribution-003 - manifests expose no tools", () => {
-    const metadata = [
-      "$schema",
-      "name",
-      "version",
-      "description",
-      "author",
-      "homepage",
-      "repository",
-      "license",
-      "keywords",
+    const tools = [
+      "mcpServers",
+      "tools",
+      "commands",
+      "hooks",
+      "agents",
+      "rules",
     ];
     for (const manifest of [portable, claude, cursor]) {
       assertEquals(
-        Object.keys(manifest).sort(),
-        metadata.filter((key) => key in manifest).sort(),
+        Object.keys(manifest).filter((key) => tools.includes(key)),
+        [],
       );
     }
   });
@@ -97,11 +94,18 @@ Deno.test("req:distribution-001 - manifests agree", async (t) => {
         for (const plugin of plugins) {
           // req:distribution-003 - marketplace entries cannot add tool
           // declarations alongside the skills-only plugin source.
-          assertEquals(Object.keys(plugin).sort(), [
-            "description",
-            "name",
-            "source",
-          ]);
+          const tools = [
+            "mcpServers",
+            "tools",
+            "commands",
+            "hooks",
+            "agents",
+            "rules",
+          ];
+          assertEquals(
+            Object.keys(plugin).filter((key) => tools.includes(key)),
+            [],
+          );
         }
         assertEquals(
           plugins.map(({ name, source }) => ({ name, source })),

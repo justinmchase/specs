@@ -6,4 +6,4 @@ the section it refines in its `spec_ref`, and the tests that verify it cite it
 with `req:{id}`.
 
 - `audit/`: this repository's internal audit (`src/audit/`).
-- `distribution/`: the skills-only plugin and its manifests.
+- `distribution/`: the skills-only plugin, its manifests, site, and logo.
