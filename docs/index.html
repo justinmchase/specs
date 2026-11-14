@@ -250,13 +250,15 @@
         </tbody>
       </table>
       <p class="note">The plugin gives the agent the <code>specs</code>,
-    <code>requirements</code>, <code>specs-init</code>, and
-    <code>specs-audit</code> skills. Agents without it can still follow the
-    pinned links in <a href="install.md">install.md</a>.</p>
+    <code>requirements</code>, <code>specs-init</code>,
+    <code>specs-extract</code>, and <code>specs-verify</code> skills. It has no
+    callable tools. Agents without it can still follow the pinned links in
+    <a href="install.md">install.md</a>.</p>
 
-      <h2>Audit</h2>
-      <pre>deno run --allow-read jsr:@justinmchase/specs/audit</pre>
-      <p>In GitHub Actions: <code>uses: justinmchase/specs@v1</code>.</p>
+      <h2>Verify</h2>
+      <p>Use this repository's own tests. Each test cites the requirements it
+    verifies with <code>req:{id}</code>. Follow
+    <a href="https://raw.githubusercontent.com/justinmchase/specs/v1/skills/specs-verify/SKILL.md">specs-verify</a>.</p>
 
       <footer>
       <a href="https://github.com/justinmchase/specs">Source</a>

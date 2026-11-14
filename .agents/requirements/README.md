@@ -5,5 +5,5 @@ Testable requirements derived from the chapters in
 the section it refines in its `spec_ref`, and the tests that verify it cite it
 with `req:{id}`.
 
-- `audit/`: the audit tool (`src/audit/`).
-- `distribution/`: the plugin manifests, skills, site, and logo.
+- `audit/`: this repository's internal audit (`src/audit/`).
+- `distribution/`: the skills-only plugin, its manifests, site, and logo.

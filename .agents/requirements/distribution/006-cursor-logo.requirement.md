@@ -1,5 +1,5 @@
 ---
-id: distribution-004
+id: distribution-006
 title: The Cursor plugin manifest names a repository-relative SVG logo
 spec_ref: ".agents/specifications/distribution.spec.md#plugin"
 ---

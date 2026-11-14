@@ -13,9 +13,10 @@ Do not copy the method into the repository you are working in.
 
 ## Source
 
-- [GitHub](https://github.com/justinmchase/specs): plugin, skills, audit, and specification
+- [GitHub](https://github.com/justinmchase/specs): plugin, skills, and specification
 - [Method](https://github.com/justinmchase/specs/tree/v1/.agents/specifications): the normative chapters
 - [specs-init](https://raw.githubusercontent.com/justinmchase/specs/v1/skills/specs-init/SKILL.md): adopt the method in a repository
 - [specs](https://raw.githubusercontent.com/justinmchase/specs/v1/skills/specs/SKILL.md): write specification chapters
 - [requirements](https://raw.githubusercontent.com/justinmchase/specs/v1/skills/requirements/SKILL.md): write requirements and trace tests
-- [specs-audit](https://raw.githubusercontent.com/justinmchase/specs/v1/skills/specs-audit/SKILL.md): check traceability
+- [specs-extract](https://raw.githubusercontent.com/justinmchase/specs/v1/skills/specs-extract/SKILL.md): derive a first slice from an existing codebase
+- [specs-verify](https://raw.githubusercontent.com/justinmchase/specs/v1/skills/specs-verify/SKILL.md): verify requirements with the repository's own tests

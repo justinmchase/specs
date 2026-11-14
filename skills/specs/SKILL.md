@@ -89,8 +89,9 @@ Keep it proportional. Routine chapters don't need this structure.
 
 ## Checking your work
 
-Run the audit (the `specs-audit` skill) after changing chapters. It reports
-requirements whose `spec_ref` points at a heading that no longer exists.
+Follow `specs-verify` after changing chapters. Inspect each affected
+requirement's `spec_ref`, update links to renamed headings, and run the
+repository's local tests that verify those requirements.
 
 The full method is defined at
 <https://github.com/justinmchase/specs/tree/v1/.agents/specifications>.

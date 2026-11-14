@@ -1,5 +1,5 @@
 ---
-id: distribution-003
+id: distribution-005
 title: A one-page GitHub Pages site includes an agent-readable install procedure
 spec_ref: ".agents/specifications/distribution.spec.md#site"
 ---

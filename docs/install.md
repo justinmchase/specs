@@ -7,7 +7,8 @@ repository.
 ## 1. Install the plugin
 
 Identify which product you run in, then install `specs` from
-https://github.com/justinmchase/specs.
+https://github.com/justinmchase/specs. The plugin is skills-only: it has no
+callable tools or MCP server.
 
 ### Cursor
 
@@ -20,8 +21,8 @@ Until then, or for local testing:
 git clone https://github.com/justinmchase/specs ~/.cursor/plugins/local/specs
 ```
 
-Reload the window. Confirm the `specs`, `requirements`, `specs-init`, and
-`specs-audit` skills are available.
+Reload the window. Confirm the `specs`, `requirements`, `specs-init`,
+`specs-extract`, and `specs-verify` skills are available.
 
 Cursor teams can import https://github.com/justinmchase/specs as a team
 marketplace instead of cloning.
@@ -69,5 +70,7 @@ does not copy the method into the repository.
   https://raw.githubusercontent.com/justinmchase/specs/v1/skills/specs/SKILL.md
 - Requirements: follow
   https://raw.githubusercontent.com/justinmchase/specs/v1/skills/requirements/SKILL.md
-- Audit: follow
-  https://raw.githubusercontent.com/justinmchase/specs/v1/skills/specs-audit/SKILL.md
+- Existing codebase: follow
+  https://raw.githubusercontent.com/justinmchase/specs/v1/skills/specs-extract/SKILL.md
+- Verify with this repository's own tests: follow
+  https://raw.githubusercontent.com/justinmchase/specs/v1/skills/specs-verify/SKILL.md

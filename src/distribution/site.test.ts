@@ -10,7 +10,7 @@ async function json(path: string): Promise<Record<string, unknown>> {
   return JSON.parse(await read(path));
 }
 
-Deno.test("req:distribution-003 - site is a one-page doc with agent install", async (t) => {
+Deno.test("req:distribution-005 - site is a one-page doc with agent install", async (t) => {
   const page = await read("docs/index.html");
   const install = await read("docs/install.md");
   const logo = await read("docs/logo.svg");
@@ -50,7 +50,7 @@ Deno.test("req:distribution-003 - site is a one-page doc with agent install", as
   });
 });
 
-Deno.test("req:distribution-004 - Cursor plugin names a repo-relative SVG logo", async (t) => {
+Deno.test("req:distribution-006 - Cursor plugin names a repo-relative SVG logo", async (t) => {
   const cursor = await json(".cursor-plugin/plugin.json");
   const marketplace = await json(".cursor-plugin/marketplace.json") as {
     plugins: { name: string; logo?: string }[];
